@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+
+.banner {
+  background-image: url('banner_image.png');
+  height: 530px;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.category-card {
+
+}
+
+.card-image {
+
+}
+
+.card-button {
+  background-color: #2F8F9D;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding:10px;
+}
