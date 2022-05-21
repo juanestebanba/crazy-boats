@@ -6,6 +6,7 @@ class BoatsController < ApplicationController
 
   def show
     set_boat
+    @booking = Booking.new
   end
 
   def new
