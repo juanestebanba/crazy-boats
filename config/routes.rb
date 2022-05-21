@@ -2,21 +2,18 @@ Rails.application.routes.draw do
   get 'categories/controller'
   devise_for :users
   root to: 'pages#home'
-<<<<<<< HEAD
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-=======
 
-  resources :boats, only: %i[index show new create] do
+  resources :boats do
     resources :bookings, only: [:create, :new]
   end
 
-  # get '/boats/:id/booking/:id', to: "bookings#show"
-<<<<<<< HEAD
+  get 'fishing_boats', to: "categories#fishing_boats"
 
->>>>>>> main
-=======
->>>>>>> main
+  # get '/boats/:id/booking/:id', to: "bookings#show"
+
 end
+
 
 # /	GET	pages	home
 # /boats	GET	boats	index
