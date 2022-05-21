@@ -12,23 +12,20 @@
     <%= link_to root_path do %>
       <%= image_tag('party_category.png', class: 'card-image') %>
    <% end %>
-    <%= link_to 'Rent', '', class: 'card-button' %>
+    <%= link_to 'Rent', boats_path, class: 'card-button' %>
   </div>
   <div class="category-card">
     <h2>Yachts</h2>
     <%= link_to root_path do %>
       <%= image_tag('yacht_category.png', class: 'card-image') %>
    <% end %>
-    <%= link_to 'Rent', '', class: 'card-button' %>
+    <%= link_to 'Rent', boats_path, class: 'card-button' %>
   </div>
   <div class="category-card">
     <h2> Fishing boats</h2>
     <%= link_to root_path do %>
       <%= image_tag('fishing_category.png', class: 'card-image') %>
     <% end %>
-    <%= link_to 'Rent', '', class: 'card-button' %>
+    <%= link_to 'Rent', boats_path, class: 'card-button' %>
   </div>
 </div>
-
-<%# Temporal acá en el home para probar que esté funcionando: %>
-<%# <%= render 'shared/booking_form' %> %>
