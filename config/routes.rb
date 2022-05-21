@@ -6,16 +6,17 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 =======
 
-  resources :boats do
+  resources :boats, only: %i[index show new create] do
     resources :bookings, only: [:create, :new]
   end
 
-
   # get '/boats/:id/booking/:id', to: "bookings#show"
+<<<<<<< HEAD
 
 >>>>>>> main
+=======
+>>>>>>> main
 end
-
 
 # /	GET	pages	home
 # /boats	GET	boats	index
