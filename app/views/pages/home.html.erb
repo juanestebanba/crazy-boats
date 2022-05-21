@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'shared/navbar' %>
+
+
+<div class="banner">
+<%# <%= image_tag('banner_image.png', class: 'banner') %>
+<h1>Boats for everyone</h1>
+</div>
+
+<div class="categories-container">
+  <div class="category-card">
+    <h2>Party boats</h2>
+    <%= link_to root_path do %>
+      <%= image_tag('party_category.png', class: 'card-image') %>
+   <% end %>
+    <%= link_to 'Rent', '', class: 'card-button' %>
+  </div>
+  <div class="category-card">
+    <h2>Yachts</h2>
+    <%= link_to root_path do %>
+      <%= image_tag('yacht_category.png', class: 'card-image') %>
+   <% end %>
+    <%= link_to 'Rent', '', class: 'card-button' %>
+  </div>
+  <div class="category-card">
+    <h2> Fishing boats</h2>
+    <%= link_to root_path do %>
+      <%= image_tag('fishing_category.png', class: 'card-image') %>
+    <% end %>
+    <%= link_to 'Rent', '', class: 'card-button' %>
+  </div>
+</div>

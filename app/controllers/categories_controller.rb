@@ -1,13 +1,13 @@
 class CategoriesController < ApplicationController
-  def fishingboats
-    @boats = Boat.where(category: "fishing_boat")
+  def fishing_boats
+    @boats = Boat.where(category: "Fishing")
   end
 
   def yachts
-    @boats = Boat.where(category: "yachts")
+    @boats = Boat.where(category: "Yacht")
   end
 
-  def sportsboat
-    @boats = Boat.where(category: "sports_boat")
+  def party_boats
+    @boats = Boat.where(category: "Party")
   end
 end
