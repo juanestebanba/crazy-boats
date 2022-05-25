@@ -1,8 +1,4 @@
-<%= render 'shared/navbar' %>
-
-
 <div class="banner">
-<%# <%= image_tag('banner_image.png', class: 'banner') %>
 <h1>Boats for everyone</h1>
 </div>
 
@@ -12,20 +8,20 @@
     <%= link_to root_path do %>
       <%= image_tag('party_category.png', class: 'card-image') %>
    <% end %>
-    <%= link_to 'Rent', '', class: 'card-button' %>
+    <%= link_to 'Rent', party_boats_path, class: 'card-button' %>
   </div>
   <div class="category-card">
     <h2>Yachts</h2>
     <%= link_to root_path do %>
       <%= image_tag('yacht_category.png', class: 'card-image') %>
    <% end %>
-    <%= link_to 'Rent', '', class: 'card-button' %>
+    <%= link_to 'Rent', yachts_path, class: 'card-button' %>
   </div>
   <div class="category-card">
     <h2> Fishing boats</h2>
     <%= link_to root_path do %>
       <%= image_tag('fishing_category.png', class: 'card-image') %>
     <% end %>
-    <%= link_to 'Rent', '', class: 'card-button' %>
+    <%= link_to 'Rent', fishing_boats_path, class: 'card-button' %>
   </div>
 </div>

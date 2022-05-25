@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :boats, dependent: :destroy
 
-  validates :name, presence: true
+  # validates :name, presence: true
   validates :encrypted_password, presence: true
   validates :email, presence: true
 end
