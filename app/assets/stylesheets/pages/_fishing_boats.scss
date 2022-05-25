@@ -1,0 +1,19 @@
+.flexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: white;
+  height: 85vh;
+  overflow: auto;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
+}
+
+.boat-card {
+  width: 100px;
+  height: auto;
+  margin: 5px;;
+  background-color: white;
+  box-shadow: 5px 4px 5px 0px rgba(29,36,89,0.65);
+}
