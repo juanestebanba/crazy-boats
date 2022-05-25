@@ -6,9 +6,7 @@
   <%= link_to  "Home", root_path, class: '' %>
   <%= link_to "Boats", boats_path, class: '' %>
   <%= link_to "Become a Host", new_boat_path, class: '' %>
-    <%= link_to root_path do %>
     <% if signed_in? %>
-      <%= image_tag('user_icon.png', class: 'avatar') %>
+      <%= link_to image_tag('user_icon.png', class: 'avatar') %> Welcome! <%= current_user.name %>
     <% end %>
-  <% end %>
 </div>
