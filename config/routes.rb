@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :boats, only: %i[index show new create] do
-    resources :bookings, only: [:create, :new]
+    resources :bookings, only: [:create, :new, :show]
   end
   get 'fishing_boats', to: "categories#fishing_boats"
   get 'party_boats', to: "categories#party_boats"
