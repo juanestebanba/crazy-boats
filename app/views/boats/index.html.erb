@@ -6,6 +6,7 @@
       <img class="card-img-top" src="..." alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><%= boat.name%></h5>
+        <%= cl_image_tag @boat.photo.key, height: 300, width: 400, crop: :fill %>
         <p class="card-text"><%= boat.category %> boat for <%= boat.capacity %></p>
         <a href=<%= boat_path(boat) %> class="btn btn-primary">Boat details </a>
       </div>
