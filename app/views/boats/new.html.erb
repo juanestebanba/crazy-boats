@@ -10,6 +10,7 @@
             <%= f.input :category, placeholder: 'Boat Category'%>
             <%= f.input :capacity, placeholder: 'Add the boat number of people' %>
             <%= f.input :price, placeholder: 'Boat price per night' %>
+            <%= f.input :photo, as: :file %>
               <p><%= f.submit "Add boat", class: "btn btn-primary" %></p>
           <% end %>
         </div>
