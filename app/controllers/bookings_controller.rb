@@ -2,6 +2,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    #filtro con el user id - aplicarlo con Active record bookings.where user=currentuser
+    #fila 4 no es necesaria
   end
 
   def new
