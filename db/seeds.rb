@@ -49,6 +49,7 @@ Booking.destroy_all
 #   )
 #   puts "booking with id #{booking.id} saved"
 # end
+puts "creating 5 party boats"
 
 party_boat_1 = Boat.create!(
   name: Faker::Space.nasa_space_craft,
@@ -95,8 +96,10 @@ party_boat_5 = Boat.create!(
 )
 party_boat_5.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614417/party_boat_5_jvsjco.jpg"), filename: "#{party_boat_5.id}photo.jpg", content_type: 'image/jpg')
 
+puts "creating 5 fishing boats"
+
 fishing_boat_1 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.launch_vehicle,
   category: "Fishing",
   capacity: (5..20).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -105,7 +108,7 @@ fishing_boat_1 = Boat.create!(
 fishing_boat_1.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614833/fishing_boat_1_zncbx8.jpg"), filename: "#{fishing_boat_1.id}photo.jpg", content_type: 'image/jpg')
 
 fishing_boat_2 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.launch_vehicle,
   category: "Fishing",
   capacity: (5..20).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -114,7 +117,7 @@ fishing_boat_2 = Boat.create!(
 fishing_boat_2.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614833/fishing_boat_2_qbfuns.jpg"), filename: "#{fishing_boat_2.id}photo.jpg", content_type: 'image/jpg')
 
 fishing_boat_3 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.launch_vehicle,
   category: "Fishing",
   capacity: (5..20).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -123,7 +126,7 @@ fishing_boat_3 = Boat.create!(
 fishing_boat_3.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614833/fishing_boat_3_yrxdbt.jpg"), filename: "#{fishing_boat_3.id}photo.jpg", content_type: 'image/jpg')
 
 fishing_boat_4 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.launch_vehicle,
   category: "Fishing",
   capacity: (5..20).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -132,7 +135,7 @@ fishing_boat_4 = Boat.create!(
 fishing_boat_4.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614833/fishing_boat_4_ofag0q.jpg"), filename: "#{fishing_boat_4.id}photo.jpg", content_type: 'image/jpg')
 
 fishing_boat_5 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.launch_vehicle,
   category: "Fishing",
   capacity: (5..20).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -140,8 +143,10 @@ fishing_boat_5 = Boat.create!(
 )
 fishing_boat_5.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614833/fishing_boat_5_nq7vfi.jpg"), filename: "#{fishing_boat_5.id}photo.jpg", content_type: 'image/jpg')
 
+puts "creating 5 yachts"
+
 yacht_1 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.meteorite,
   category: "Yacht",
   capacity: (8..30).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -150,7 +155,7 @@ yacht_1 = Boat.create!(
 yacht_1.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614834/yacht_1_rvzbda.jpg"), filename: "#{yacht_1.id}photo.jpg", content_type: 'image/jpg')
 
 yacht_2 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.meteorite,
   category: "Yacht",
   capacity: (8..30).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -159,7 +164,7 @@ yacht_2 = Boat.create!(
 yacht_2.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614834/yacht_2_odd2if.jpg"), filename: "#{yacht_2.id}photo.jpg", content_type: 'image/jpg')
 
 yacht_3 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.meteorite,
   category: "Yacht",
   capacity: (8..30).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -168,7 +173,7 @@ yacht_3 = Boat.create!(
 yacht_3.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614834/yacht_3_jcm9ps.jpg"), filename: "#{yacht_3.id}photo.jpg", content_type: 'image/jpg')
 
 yacht_4 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.meteorite,
   category: "Yacht",
   capacity: (8..30).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
@@ -177,7 +182,7 @@ yacht_4 = Boat.create!(
 yacht_4.photo.attach(io: URI.open("https://res.cloudinary.com/duqopwkea/image/upload/v1653614834/yacht_4_nfwtgl.jpg"), filename: "#{yacht_4.id}photo.jpg", content_type: 'image/jpg')
 
 yacht_5 = Boat.create!(
-  name: Faker::Space.nasa_space_craft,
+  name: Faker::Space.meteorite,
   category: "Yacht",
   capacity: (8..30).to_a.sample,
   price: Faker::Commerce.price(range: 10..10_000.0),
