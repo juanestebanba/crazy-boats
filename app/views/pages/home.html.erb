@@ -3,25 +3,19 @@
 </div>
 
 <div class="categories-container">
-  <div class="category-card">
-    <h2>Party boats</h2>
-    <%= link_to root_path do %>
-      <%= image_tag('party_category.png', class: 'card-image') %>
+  <%= link_to party_boats_path do %>
+    <div class="category-card party-card bg-image">
+      Party Boats
+    </div>
+  <% end %>
+  <%= link_to yachts_path do %>
+    <div class="category-card yacht-card bg-image">
+      Yachts
+    </div>
    <% end %>
-    <%= link_to 'Rent', party_boats_path, class: 'card-button' %>
-  </div>
-  <div class="category-card">
-    <h2>Yachts</h2>
-    <%= link_to root_path do %>
-      <%= image_tag('yacht_category.png', class: 'card-image') %>
+  <%= link_to fishing_boats_path do %>
+    <div class="category-card fishing-card bg-image">
+      Fishing Boats
+    </div>
    <% end %>
-    <%= link_to 'Rent', yachts_path, class: 'card-button' %>
-  </div>
-  <div class="category-card">
-    <h2> Fishing boats</h2>
-    <%= link_to root_path do %>
-      <%= image_tag('fishing_category.png', class: 'card-image') %>
-    <% end %>
-    <%= link_to 'Rent', fishing_boats_path, class: 'card-button' %>
-  </div>
 </div>
