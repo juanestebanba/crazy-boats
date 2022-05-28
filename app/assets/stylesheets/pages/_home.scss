@@ -4,6 +4,17 @@
   background-image: url('banner_image.png');
   height: 530px;
   background-size: cover;
+  position: relative;
+}
+
+.banner-title {
+  position:absolute;
+  bottom:0;
+  right: 32px;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .categories-container {
