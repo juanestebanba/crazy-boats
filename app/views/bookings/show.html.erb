@@ -1,11 +1,13 @@
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <div class = "pt-5">
-  <div class="container border">
-
+  <div class="container white-back border pt-3">
     <h1>Congrats! Your Booking for <%= @booking.number_of_people %> Is All Set!</h1>
     <br>
-    <h2><%= @boat.name %></h2>
+    <% if @boat.photo.attached? %>
+      <%= cl_image_tag @boat.photo.key, height: 460, width: 950, crop: :fill %>
+    <% end %>
+    <h2 class = "pt-3"><%= @boat.name %> <%=  @boat.category %> </h2>
     <div class= "container border bottom"></div>
       <div class="container pt-3">
         <h3>Dates of your reservation:</h3>
