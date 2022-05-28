@@ -1,9 +1,14 @@
 class BookingsController < ApplicationController
-
   def index
-    @bookings = Booking.find(1)
+    @user = current_user
+    # @bookings = Booking.find(user_id: @user.id)
+    # @bookings = Booking.find(user_id: @user.id)
+    @bookings = Booking.find(@user.bookings.first.id)
+
+    @boat = Boat.find(@user.bookings.first.boat_id)
+
     # @boats = Boat.where(boat_id: bookings.boat_id)
-    @boat = Boat.find(@bookings.boat_id)
+    # @boat = Boat.find(@bookings.boat_id)
   end
 
   def new

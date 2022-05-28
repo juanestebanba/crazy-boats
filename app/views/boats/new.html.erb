@@ -7,7 +7,7 @@
           <br>
           <%= simple_form_for [ @user, @boat ] do |f| %>
             <%= f.input :name, placeholder: 'Add a boat name' %>
-            <%= f.input :category, placeholder: 'Boat Category'%>
+            <%= f.input :category, collection: [ "Party", "Yacht", "Fishing"]%>
             <%= f.input :capacity, placeholder: 'Add the boat number of people' %>
             <%= f.input :price, placeholder: 'Boat price per night' %>
             <%= f.input :photo, as: :file %>

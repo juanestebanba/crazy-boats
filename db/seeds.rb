@@ -9,8 +9,8 @@ require "faker"
 require "open-uri"
 
 # User.destroy_all
-Boat.destroy_all
-Booking.destroy_all
+# Boat.destroy_all
+# Booking.destroy_all
 
 puts 'Creating 20 fake users...'
 user = User.create!(

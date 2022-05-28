@@ -9,6 +9,7 @@
         <p><%= link_to "Book a Yacht", yachts_path %></p>
         <p><%= link_to "Book a Fishing boat", fishing_boats_path %></p>
       <% else %>
+
         <p> Your bookings details for your trip aboard <strong><%= @boat.name %></strong> </p>
         <p> Type of boat: <%= @boat.category %></p>
         <p> Boat maximum capacity: <%= @boat.capacity %></p>
