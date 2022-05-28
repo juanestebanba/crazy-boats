@@ -1,9 +1,9 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.all
-    #filtro con el user id - aplicarlo con Active record bookings.where user=currentuser
-    #fila 4 no es necesaria
+    @bookings = Booking.find(1)
+    # @boats = Boat.where(boat_id: bookings.boat_id)
+    @boat = Boat.find(@bookings.boat_id)
   end
 
   def new
