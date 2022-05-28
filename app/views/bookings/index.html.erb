@@ -1,0 +1,46 @@
+<h1>Bookings</h1>
+
+<div id="bookings">
+  <% if @bookings.blank? %>
+    <p>You don't have any bookings yet. Go book a boat for your next adeventure!</p>
+    <p><%= link_to "Book a Party boat", party_boats_path %></p>
+    <p><%= link_to "Book a Yacht", yachts_path %></p>
+    <p><%= link_to "Book a Fishing boat", fishing_boats_path %></p>
+  <% else %>
+    <p>Your bookings details</p>
+    <p> Boat name: <%= @boat.name %></p>
+    <p> Type of boat: <%= @boat.category %></p>
+    <p> Boat maximum capacity: <%= @boat.capacity %></p>
+    <p> Price<%= @boat.price %></p>
+    <p> Start date: <%= @bookings.start_date %> </p>
+    <p> End date: <%= @bookings.end_date %> </p>
+  <% end %>
+</div>
+
+
+
+  <%# create_table "bookings", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.bigint "boat_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "number_of_people"
+    t.index ["boat_id"], name: "index_bookings_on_boat_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id" %>
+
+
+<%# class Booking < ApplicationRecord
+  belongs_to :user
+  belongs_to :boat
+  validates :boat_id, presence: true
+  validates :user_id, presence: true
+end
+
+class Boat < ApplicationRecord
+  has_many :bookings, dependent: :destroy
+  belongs_to :user
+  validates :name, :category, :capacity, :price, presence: true
+  has_one_attached :photo
+end %>
